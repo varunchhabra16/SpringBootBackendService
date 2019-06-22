@@ -13,25 +13,25 @@ public class UserDaoService {
     @Autowired
     UserRepository userRepository;
 
-    List<User> findAllUsers(){
+    public List<User> findAllUsers(){
         return userRepository.findAll();
     }
 
-    User findUserById(Long id){
+    public User findUserById(Long id){
         return userRepository.findById(id).get(); //tobereviewed
     }
 
-    User createUser(User user){
+    public User createUser(User user){
         userRepository.save(user);
         return user;
     }
 
-    User updateUser(User user){
+    public User updateUser(User user){
         userRepository.save(user);
         return user;
     }
 
-    void deleteUser(Long id){
+    public void deleteUser(Long id){
         userRepository.deleteById(id);
     }
 
